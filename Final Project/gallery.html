@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="css/main.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +10,56 @@
 </head>
 <body>
   <header>
-		<h1>GALLERY</h1>
+		<h1 class="header">GALLERY</h1>
 	</header>
   <div id="container2">
   <section class="gallery-grid2">
-				<div>
-					<img src="book1.jpg" alt=""/>
-					<img src="book4.jpg" alt=""/>
-					<img src="book7.jpg" alt=""/>
-				</div>
-				<div>
-					<img src="book2.jpg" <alt=""/>
-          <img src="book5.jpg" <alt=""/>
-          <img src="book8.jpg" <alt=""/>
-				</div>
-        <div>
-					<img src="book3.jpg" alt=""/>
-					<img src="book6.jpg" alt=""/>
-          </div>
+			<!--<img src="book1.jpg" alt=""/>-->
+      <div class="w3-content w3-display-container">
+      <img class="mySlides" src="book1.jpg" style="width:100%">
+      <img class="mySlides" src="TA1.jpg" style="width:100%">
+      <img class="mySlides" src="TA2.jpg" style="width:100%">
+      <img class="mySlides" src="TA3.jpg" style="width:100%">
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>
+			<!--<img src="book4.jpg" alt=""/>-->
+      <div class="w3-content w3-display-container">
+      <img class="mySlides" src="book1.jpg" style="width:100%">
+      <img class="mySlides" src="19641.jpg" style="width:100%">
+      <img class="mySlides" src="19642.jpg" style="width:100%">
+      <img class="mySlides" src="19643.jpg" style="width:100%">
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+      </div>
+			<img src="book7.jpg" alt=""/>
+			<img src="book2.jpg" <alt=""/>
+      <img src="book5.jpg" <alt=""/>
+      <img src="book8.jpg" <alt=""/>
+			<img src="book3.jpg" alt=""/>
+			<img src="book6.jpg" alt=""/>
+      <img src="book9.jpg" alt=""/>
   </div id="container2">
 	</section>
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+    showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+    }
+    </script>
+  </div>
 </body>
 </html>
